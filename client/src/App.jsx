@@ -1,22 +1,31 @@
+import { createGlobalStyle } from "styled-components";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Main from "./components/Main";
+
+const GlobalStyle = createGlobalStyle`
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: gray;
+}
+`;
+
 function App() {
   return (
     <>
-      <header>
-        <h1>Header</h1>
-        <nav>
-          <a href="">1</a>
-          <a href="">2</a>
-          <a href="">3</a>
-        </nav>
-      </header>
-
-      <main>
-        <h2>main content</h2>
-      </main>
-
-      <footer>
-        <h2>footer content</h2>
-      </footer>
+      <GlobalStyle />
+      <Header />
+      <Main />
+      <Footer />
     </>
   );
 }
